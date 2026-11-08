@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#100b22">
+<meta name="description" content="A little Diwali surprise for Shradha">
+<title>For Shradha — Sakhi ✨</title>
+<style>
+:root{--gold:#ffd98a;--cream:#fff2d4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% 18%,#342044 0%,#17102c 42%,#090817 100%);color:var(--cream);font-family:Georgia,"Noto Serif Devanagari",serif;overflow-x:hidden}
+.stars,.stars:before,.stars:after{position:fixed;inset:0;pointer-events:none;content:"";background-image:radial-gradient(2px 2px at 12% 20%,#fff 45%,transparent 55%),radial-gradient(1px 1px at 70% 12%,#ffe6ad 45%,transparent 55%),radial-gradient(1.5px 1.5px at 85% 42%,#fff 45%,transparent 55%),radial-gradient(1px 1px at 28% 68%,#ffe6ad 45%,transparent 55%),radial-gradient(1px 1px at 52% 83%,#fff 45%,transparent 55%);opacity:.55;z-index:0}
+.stars:before{transform:translate(20px,30px);opacity:.5}.stars:after{transform:translate(-25px,60px);opacity:.35}
+section{position:relative;z-index:1;min-height:100svh;padding:72px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.eyebrow{letter-spacing:.32em;text-transform:uppercase;font:11px Arial,sans-serif;color:#e9b96f}
+h1{font-size:clamp(48px,13vw,78px);line-height:1.05;margin:18px 0 12px;color:var(--gold);font-weight:400;text-shadow:0 0 30px #ffb84d55}
+.name{font-size:clamp(27px,7vw,38px);color:#fff0ce;margin:8px 0 22px}
+.quote{max-width:560px;font-size:clamp(19px,5vw,24px);line-height:1.9;color:#f7e7cd}
+.rule{width:75px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:24px auto}
+.hint{font:12px Arial,sans-serif;letter-spacing:.12em;color:#d7bca0;margin-top:42px;animation:pulse 2s infinite}
+.scroll{font-size:24px;margin-top:10px;color:var(--gold)}
+@keyframes pulse{50%{opacity:.48}}
+.section-title{font-size:clamp(28px,7vw,40px);font-weight:400;color:var(--gold);margin:0 0 12px}
+.sub{font:13px/1.7 Arial,sans-serif;color:#d4c0ad;max-width:340px;margin:0 auto 35px}
+.diyas{display:flex;align-items:flex-end;justify-content:center;gap:clamp(8px,3vw,20px);width:100%;max-width:440px;margin:10px auto 26px}
+.diya-button{border:0;background:transparent;padding:8px 2px;cursor:pointer;min-width:0;flex:1;max-width:92px;color:inherit;-webkit-tap-highlight-color:transparent}
+.diya-button:focus-visible{outline:2px solid var(--gold);border-radius:16px}
+.bowl{height:35px;width:100%;max-width:78px;margin:auto;position:relative;background:linear-gradient(180deg,#f8c36b,#a94d28 65%,#612a2d);border-radius:8px 8px 35px 35px;box-shadow:inset 0 5px 7px #ffe3a077,0 8px 15px #0008;transform:perspective(40px) rotateX(-5deg)}
+.bowl:before{content:"";position:absolute;top:-5px;left:-3%;width:106%;height:10px;border-radius:50%;background:linear-gradient(#ffe0a0,#b66b39)}
+.flame{position:absolute;left:50%;bottom:29px;width:14px;height:25px;transform:translateX(-50%) scale(.2);opacity:0;background:radial-gradient(ellipse at 50% 72%,#fffbd2 0 16%,#ffdb69 35%,#ff8b26 68%,transparent 72%);border-radius:70% 10% 70% 70%;filter:drop-shadow(0 0 9px #ffad38);transform-origin:bottom;transition:all .5s}
+.diya-button.lit .flame{opacity:1;transform:translateX(-50%) scale(1);animation:flicker .7s infinite alternate}
+@keyframes flicker{to{filter:drop-shadow(0 0 15px #ffd36a);transform:translateX(-50%) scale(1.08,.94)}}
+.diya-label{display:block;font:10px Arial,sans-serif;color:#d6bfa8;margin-top:13px;letter-spacing:.08em}
+.diya-button.lit .diya-label{color:var(--gold)}
+.tap-note{font:12px Arial,sans-serif;color:#d6bfa8;letter-spacing:.08em}
+#celebration{display:none;min-height:100svh;overflow:hidden}
+#celebration.show{display:flex}
+.rocket{position:absolute;bottom:13%;left:50%;font-size:34px;opacity:0;transform:translateX(-50%);z-index:3}
+.rocket.launch{animation:launch 1.5s ease-in forwards}
+@keyframes launch{0%{opacity:1;bottom:13%;transform:translateX(-50%) scale(.8)}75%{opacity:1}100%{opacity:0;bottom:78%;transform:translateX(-50%) scale(.35)}}
+.burst{position:absolute;top:25%;left:50%;width:8px;height:8px;border-radius:50%;opacity:0;background:var(--gold)}
+.burst.go{animation:burst 1.4s ease-out forwards}
+@keyframes burst{0%{opacity:1;box-shadow:0 0 0 0 #ffd98a}45%{opacity:1;box-shadow:0 -90px 0 2px #ffd98a,65px -65px 0 2px #ff8a45,90px 0 0 2px #fff0b0,65px 65px 0 2px #ffb84d,0 90px 0 2px #ffd98a,-65px 65px 0 2px #ff8a45,-90px 0 0 2px #fff0b0,-65px -65px 0 2px #ffb84d}100%{opacity:0;box-shadow:0 -120px 0 0 transparent,85px -85px 0 0 transparent,120px 0 0 0 transparent,85px 85px 0 0 transparent,0 120px 0 0 transparent,-85px 85px 0 0 transparent,-120px 0 0 0 transparent,-85px -85px 0 0 transparent}}
+.final-message{opacity:0;transform:translateY(18px);transition:all 1s ease;z-index:4}
+.final-message.reveal{opacity:1;transform:translateY(0)}
+.final-message h2{font:700 clamp(34px,9vw,56px)/1.2 Arial,sans-serif;letter-spacing:.05em;color:var(--gold);text-shadow:0 0 28px #ffb33d88;margin:0}
+.final-message p{font-size:clamp(25px,7vw,36px);font-style:italic;color:#fff0d1;margin:16px 0}
+.heart{color:#ff8b8b}
+footer{font:11px Arial,sans-serif;color:#aa9589;letter-spacing:.12em;margin-top:48px}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<section class="hero">
+  <div class="eyebrow">A little light, for my favourite Mahila Mitra</div>
+  <h1>शुभ दीपावली</h1>
+  <div class="name">मेरी प्यारी सखी, श्रद्धा ✨</div>
+  <div class="rule"></div>
+  <p class="quote">दोस्ती की रोशनी यूँ ही बनी रहे,<br>हर मुश्किल में हँसी तेरे संग खड़ी रहे।<br>तेरी दुनिया खुशियों से जगमगाती रहे,<br>मेरी सखी, तेरी हर दिवाली ख़ास रहे।</p>
+  <div class="hint">SCROLL DOWN FOR A LITTLE SURPRISE</div>
+  <div class="scroll">⌄</div>
+</section>
+<section id="lamps">
+  <h2 class="section-title">अरी सखी, एक छोटी-सी ख्वाहिश…</h2>
+  <p class="sub">इन दीयों में से किसी एक को छूकर रोशनी जगा दो।<br>आज की रात हमारी दोस्ती के नाम।</p>
+  <div class="diyas" id="diyas" aria-label="Tap a diya to light all the lamps">
+    <button class="diya-button" aria-label="दीया १"><span class="flame"></span><span class="bowl"></span><span class="diya-label">दीया १</span></button>
+    <button class="diya-button" aria-label="दीया २"><span class="flame"></span><span class="bowl"></span><span class="diya-label">दीया २</span></button>
+    <button class="diya-button" aria-label="दीया ३"><span class="flame"></span><span class="bowl"></span><span class="diya-label">दीया ३</span></button>
+    <button class="diya-button" aria-label="दीया ४"><span class="flame"></span><span class="bowl"></span><span class="diya-label">दीया ४</span></button>
+    <button class="diya-button" aria-label="दीया ५"><span class="flame"></span><span class="bowl"></span><span class="diya-label">दीया ५</span></button>
+  </div>
+  <div class="tap-note" id="tapNote">किसी भी दीये को प्यार से छूना, सखी ❤️</div>
+</section>
+<section id="celebration">
+  <div class="rocket" id="rocket">🚀</div><div class="burst" id="burst"></div>
+  <div class="final-message" id="finalMessage">
+    <div class="eyebrow">A friendship that shines bright</div>
+    <h2>HAPPY DIWALI</h2>
+    <p>MY SAKHI <span class="heart">♥</span></p>
+    <div class="rule"></div>
+    <div class="quote">महिला मित्र नहीं, मेरी अपनी वाली सखी! ✨</div>
+    <footer>MADE WITH FRIENDSHIP, JUST FOR SHRADHA</footer>
+  </div>
+</section>
+<script>
+(()=>{const buttons=[...document.querySelectorAll('.diya-button')],note=document.getElementById('tapNote'),celebration=document.getElementById('celebration');let done=false;buttons.forEach(button=>button.addEventListener('click',()=>{if(done)return;done=true;buttons.forEach((diya,i)=>setTimeout(()=>diya.classList.add('lit'),i*180));note.textContent='देख सखी… सारी रोशनी तेरे लिए ✨';setTimeout(()=>{celebration.classList.add('show');celebration.scrollIntoView({behavior:'smooth'});const rocket=document.getElementById('rocket'),burst=document.getElementById('burst'),message=document.getElementById('finalMessage');setTimeout(()=>rocket.classList.add('launch'),450);setTimeout(()=>burst.classList.add('go'),1700);setTimeout(()=>message.classList.add('reveal'),2300)},1450)}))})();
+</script>
+</body>
+</html>
